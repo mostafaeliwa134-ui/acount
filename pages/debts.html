@@ -1,0 +1,83 @@
+<section class="page-section debts-page">
+    <div class="page-header">
+        <div>
+            <h2>إدارة الديون</h2>
+            <p>متابعة المبالغ المستحقة وتسجيل الدفعات.</p>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <article class="stat-card">
+            <div class="stat-card-info">
+                <p>إجمالي الديون</p>
+                <h3 id="debts-total">0.00 ₪</h3>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-card-info">
+                <p>المبالغ المحصلة</p>
+                <h3 id="debts-paid">0.00 ₪</h3>
+            </div>
+        </article>
+        <article class="stat-card">
+            <div class="stat-card-info">
+                <p>المبالغ المتبقية</p>
+                <h3 id="debts-remaining">0.00 ₪</h3>
+            </div>
+        </article>
+    </div>
+
+    <section class="content-card">
+        <h3>تسجيل دفعة</h3>
+        <form id="debt-payment-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="debt-customer">اسم العميل</label>
+                    <input id="debt-customer" type="text" required placeholder="اسم العميل">
+                </div>
+                <div class="form-group">
+                    <label for="debt-invoice">رقم الفاتورة</label>
+                    <input id="debt-invoice" type="text" placeholder="رقم الفاتورة">
+                </div>
+                <div class="form-group">
+                    <label for="debt-payment-amount">مبلغ الدفعة</label>
+                    <input id="debt-payment-amount" type="number" min="0.01" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="debt-payment-date">تاريخ الدفع</label>
+                    <input id="debt-payment-date" type="date" required>
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="debt-payment-notes">ملاحظات</label>
+                    <textarea id="debt-payment-notes" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">تسجيل الدفعة</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <h3>سجل الديون</h3>
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>العميل</th>
+                        <th>رقم الفاتورة</th>
+                        <th>قيمة الفاتورة</th>
+                        <th>المدفوع</th>
+                        <th>المتبقي</th>
+                        <th>التاريخ</th>
+                    </tr>
+                </thead>
+                <tbody id="debts-table">
+                    <tr>
+                        <td colspan="6">لا توجد ديون مسجلة.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>

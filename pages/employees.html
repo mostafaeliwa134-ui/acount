@@ -1,0 +1,76 @@
+<section class="page-section employees-page">
+    <div class="page-header">
+        <div>
+            <h2>إدارة الموظفين</h2>
+            <p>حفظ بيانات فريق العمل ومعلومات الوظائف.</p>
+        </div>
+        <button type="button" id="add-employee-btn" class="btn btn-primary">+ إضافة موظف</button>
+    </div>
+
+    <section class="content-card">
+        <h3>بيانات الموظف</h3>
+        <form id="employee-form">
+            <input type="hidden" id="employee-id">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="employee-name">اسم الموظف *</label>
+                    <input id="employee-name" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="employee-phone">رقم الهاتف</label>
+                    <input id="employee-phone" type="tel">
+                </div>
+                <div class="form-group">
+                    <label for="employee-email">البريد الإلكتروني</label>
+                    <input id="employee-email" type="email">
+                </div>
+                <div class="form-group">
+                    <label for="employee-role">المسمى الوظيفي *</label>
+                    <input id="employee-role" type="text" required placeholder="مثال: موظف مبيعات">
+                </div>
+                <div class="form-group">
+                    <label for="employee-salary">الراتب</label>
+                    <input id="employee-salary" type="number" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="employee-start-date">تاريخ التعيين</label>
+                    <input id="employee-start-date" type="date">
+                </div>
+                <div class="form-group">
+                    <label for="employee-status">الحالة</label>
+                    <select id="employee-status">
+                        <option value="active">على رأس العمل</option>
+                        <option value="inactive">غير نشط</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">حفظ الموظف</button>
+                <button type="reset" class="btn btn-secondary">تفريغ الحقول</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <h3>قائمة الموظفين</h3>
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>المسمى الوظيفي</th>
+                        <th>الهاتف</th>
+                        <th>الراتب</th>
+                        <th>الحالة</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="employees-table">
+                    <tr>
+                        <td colspan="6">لا يوجد موظفون مسجلون.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>

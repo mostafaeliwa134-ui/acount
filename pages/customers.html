@@ -1,0 +1,68 @@
+<section class="page-section customers-page">
+    <div class="page-header">
+        <div>
+            <h2>إدارة العملاء</h2>
+            <p>إضافة العملاء ومتابعة بياناتهم ومشترياتهم.</p>
+        </div>
+        <button type="button" id="add-customer-btn" class="btn btn-primary">+ إضافة عميل</button>
+    </div>
+
+    <section class="content-card">
+        <h3 id="customer-form-title">بيانات العميل</h3>
+        <form id="customer-form">
+            <input type="hidden" id="customer-id">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="customer-name">**اسم العميل** </label>
+                    <input id="customer-name" type="text" required placeholder="الاسم الكامل">
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">رقم الهاتف</label>
+                    <input id="customer-phone" type="tel" placeholder="رقم الهاتف">
+                </div>
+                <div class="form-group">
+                    <label for="customer-email">البريد الإلكتروني</label>
+                    <input id="customer-email" type="email" placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">العنوان</label>
+                    <input id="customer-address" type="text" placeholder="عنوان العميل">
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="customer-notes">ملاحظات</label>
+                    <textarea id="customer-notes" rows="3" placeholder="ملاحظات إضافية"></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">حفظ العميل</button>
+                <button type="reset" class="btn btn-secondary">تفريغ الحقول</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <h3>قائمة العملاء</h3>
+        <div class="form-group">
+            <label for="customers-search">البحث عن عميل</label>
+            <input id="customers-search" type="search" placeholder="الاسم أو رقم الهاتف">
+        </div>
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>الهاتف</th>
+                        <th>البريد الإلكتروني</th>
+                        <th>العنوان</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="customers-table">
+                    <tr>
+                        <td colspan="5">لا يوجد عملاء مسجلون.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,95 @@
+<section class="page-section dashboard-page">
+
+    <div class="page-header">
+        <div>
+            <h2>لوحة التحكم</h2>
+            <p>ملخص سريع عن أداء متجرك اليوم.</p>
+        </div>
+
+        <div class="page-header-actions">
+            <span id="dashboard-today-date"></span>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+
+        <article class="stat-card">
+            <div class="stat-card-info">
+                <p>مبيعات اليوم</p>
+                <h3 id="stat-sales">0.00 ₪</h3>
+            </div>
+            <div class="stat-card-icon">₪</div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-card-info">
+                <p>إجمالي المنتجات</p>
+                <h3 id="stat-products">0</h3>
+            </div>
+            <div class="stat-card-icon">📦</div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-card-info">
+                <p>منتجات منخفضة المخزون</p>
+                <h3 id="stat-low-stock">0</h3>
+            </div>
+            <div class="stat-card-icon">⚠️</div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-card-info">
+                <p>مصاريف اليوم</p>
+                <h3 id="stat-expenses">0.00 ₪</h3>
+            </div>
+            <div class="stat-card-icon">💳</div>
+        </article>
+
+    </div>
+
+    <div class="dashboard-content-grid">
+
+        <section class="content-card">
+            <div class="content-card-header">
+                <div>
+                    <h3>آخر المبيعات</h3>
+                    <p>أحدث عمليات البيع المسجلة.</p>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>رقم الفاتورة</th>
+                            <th>العميل</th>
+                            <th>التاريخ</th>
+                            <th>الإجمالي</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recent-sales-table">
+                        <tr>
+                            <td colspan="4">لا توجد مبيعات حتى الآن.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="content-card-header">
+                <div>
+                    <h3>تنبيهات المخزون</h3>
+                    <p>المنتجات التي تحتاج إلى إعادة توفير.</p>
+                </div>
+            </div>
+
+            <div id="stock-alerts">
+                <p>لا توجد تنبيهات حاليًا.</p>
+            </div>
+        </section>
+
+    </div>
+
+</section>

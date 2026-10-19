@@ -1,0 +1,48 @@
+<section class="page-section profile-page">
+    <div class="page-header">
+        <div>
+            <h2>الملف الشخصي</h2>
+            <p>عرض وتحديث بيانات حسابك ومعلومات المتجر.</p>
+        </div>
+    </div>
+
+    <section class="content-card">
+        <h3>معلومات الحساب والمتجر</h3>
+
+        <form id="profile-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="profile-owner-name">اسم صاحب المتجر</label>
+                    <input id="profile-owner-name" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-store-name">اسم المتجر</label>
+                    <input id="profile-store-name" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-email">البريد الإلكتروني</label>
+                    <input id="profile-email" type="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-phone">رقم الهاتف</label>
+                    <input id="profile-phone" type="tel">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    حفظ التعديلات
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <h3>معلومات الحساب الحالية</h3>
+        <p>اسم المستخدم: <strong id="profile-page-owner-name">—</strong></p>
+        <p>البريد الإلكتروني: <strong id="profile-page-email">—</strong></p>
+    </section>
+</section>

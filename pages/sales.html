@@ -1,0 +1,129 @@
+<section class="page-section sales-page">
+
+    <div class="page-header">
+        <div>
+            <h2>إدارة المبيعات</h2>
+            <p>تسجيل عمليات البيع ومتابعة الفواتير والمدفوعات.</p>
+        </div>
+        <button type="button" id="new-sale-btn" class="btn btn-primary">
+            + فاتورة جديدة
+        </button>
+    </div>
+
+    <section class="content-card">
+        <div class="content-card-header">
+            <div>
+                <h3>إنشاء فاتورة بيع</h3>
+                <p>اختر المنتجات والكميات لإتمام عملية البيع.</p>
+            </div>
+        </div>
+
+        <form id="sale-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="sale-customer">اسم العميل</label>
+                    <input id="sale-customer" type="text" placeholder="اسم العميل (اختياري)">
+                </div>
+
+                <div class="form-group">
+                    <label for="sale-payment-method">طريقة الدفع</label>
+                    <select id="sale-payment-method">
+                        <option value="cash">نقدي</option>
+                        <option value="electronic">إلكتروني</option>
+                        <option value="credit">آجل</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sale-product">المنتج</label>
+                    <select id="sale-product" required>
+                        <option value="">اختر المنتج</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sale-quantity">الكمية</label>
+                    <input id="sale-quantity" type="number" min="1" step="1" value="1" required>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="add-sale-item-btn" class="btn btn-secondary">
+                    إضافة المنتج للفاتورة
+                </button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>المنتج</th>
+                            <th>السعر</th>
+                            <th>الكمية</th>
+                            <th>الإجمالي</th>
+                            <th>الإجراء</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sale-items-table">
+                        <tr>
+                            <td colspan="5">لم تتم إضافة منتجات.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="sale-summary">
+                <h3>الإجمالي: <span id="sale-total">0.00 ₪</span></h3>
+                <div class="form-group">
+                    <label for="sale-amount-paid">المبلغ المدفوع</label>
+                    <input id="sale-amount-paid" type="number" min="0" step="0.01" value="0" required>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">حفظ الفاتورة</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <div class="content-card-header">
+            <div>
+                <h3>سجل المبيعات</h3>
+                <p>عرض الفواتير السابقة والبحث فيها.</p>
+            </div>
+        </div>
+
+        <div class="table-filters">
+            <div class="form-group">
+                <label for="sales-search">البحث</label>
+                <input id="sales-search" type="search" placeholder="رقم الفاتورة أو اسم العميل">
+            </div>
+            <div class="form-group">
+                <label for="sales-date-filter">تاريخ البيع</label>
+                <input id="sales-date-filter" type="date">
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>رقم الفاتورة</th>
+                        <th>العميل</th>
+                        <th>التاريخ</th>
+                        <th>الإجمالي</th>
+                        <th>المدفوع</th>
+                        <th>المتبقي</th>
+                    </tr>
+                </thead>
+                <tbody id="sales-table">
+                    <tr>
+                        <td colspan="6">لا توجد مبيعات حتى الآن.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</section>

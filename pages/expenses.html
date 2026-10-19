@@ -1,0 +1,79 @@
+<section class="page-section expenses-page">
+    <div class="page-header">
+        <div>
+            <h2>إدارة المصاريف</h2>
+            <p>تسجيل مصاريف المتجر ومتابعة الإنفاق.</p>
+        </div>
+    </div>
+
+    <section class="content-card">
+        <h3>إضافة مصروف</h3>
+        <form id="expense-form">
+            <input type="hidden" id="expense-id">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="expense-title">اسم المصروف *</label>
+                    <input id="expense-title" type="text" required placeholder="مثال: إيجار المحل">
+                </div>
+                <div class="form-group">
+                    <label for="expense-category">التصنيف *</label>
+                    <select id="expense-category" required>
+                        <option value="">اختر التصنيف</option>
+                        <option value="rent">الإيجار</option>
+                        <option value="utilities">الكهرباء والمياه</option>
+                        <option value="transport">المواصلات</option>
+                        <option value="salaries">الرواتب</option>
+                        <option value="maintenance">الصيانة</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="expense-amount">المبلغ *</label>
+                    <input id="expense-amount" type="number" min="0.01" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="expense-date">التاريخ *</label>
+                    <input id="expense-date" type="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="expense-payment-method">طريقة الدفع</label>
+                    <select id="expense-payment-method">
+                        <option value="cash">نقدي</option>
+                        <option value="electronic">إلكتروني</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="expense-notes">ملاحظات</label>
+                    <input id="expense-notes" type="text" placeholder="تفاصيل إضافية">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">حفظ المصروف</button>
+                <button type="reset" class="btn btn-secondary">تفريغ الحقول</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <h3>سجل المصاريف</h3>
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>المصروف</th>
+                        <th>التصنيف</th>
+                        <th>المبلغ</th>
+                        <th>التاريخ</th>
+                        <th>طريقة الدفع</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="expenses-table">
+                    <tr>
+                        <td colspan="6">لا توجد مصاريف مسجلة.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>

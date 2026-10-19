@@ -1,0 +1,55 @@
+<section class="page-section settings-page">
+    <div class="page-header">
+        <div>
+            <h2>إعدادات المتجر</h2>
+            <p>تخصيص العملة والتفضيلات العامة للتطبيق.</p>
+        </div>
+    </div>
+
+    <section class="content-card">
+        <h3>الإعدادات العامة</h3>
+
+        <form id="settings-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="settings-store-name">اسم المتجر</label>
+                    <input id="settings-store-name" type="text" placeholder="اسم المتجر">
+                </div>
+
+                <div class="form-group">
+                    <label for="settings-currency">العملة</label>
+                    <select id="settings-currency">
+                        <option value="₪">شيكل فلسطيني (₪)</option>
+                        <option value="$">دولار أمريكي ($)</option>
+                        <option value="د.أ">دينار أردني (د.أ)</option>
+                        <option value="ر.س">ريال سعودي (ر.س)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="settings-language">لغة التطبيق</label>
+                    <select id="settings-language">
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="settings-low-stock">تنبيه انخفاض المخزون</label>
+                    <input id="settings-low-stock" type="number" min="0" step="1" value="5">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    حفظ الإعدادات
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <h3>إدارة الجلسة</h3>
+        <p>يمكنك تسجيل الخروج من حسابك الحالي.</p>
+        <p>لتسجيل الخروج، استخدم الزر الموجود في القائمة الجانبية.</p>
+    </section>
+</section>

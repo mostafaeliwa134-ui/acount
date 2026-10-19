@@ -1,0 +1,72 @@
+<section class="page-section suppliers-page">
+    <div class="page-header">
+        <div>
+            <h2>إدارة الموردين</h2>
+            <p>حفظ بيانات الموردين ووسائل التواصل معهم.</p>
+        </div>
+        <button type="button" id="add-supplier-btn" class="btn btn-primary">+ إضافة مورد</button>
+    </div>
+
+    <section class="content-card">
+        <h3>بيانات المورد</h3>
+        <form id="supplier-form">
+            <input type="hidden" id="supplier-id">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="supplier-name">اسم المورد *</label>
+                    <input id="supplier-name" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="supplier-phone">رقم الهاتف</label>
+                    <input id="supplier-phone" type="tel">
+                </div>
+                <div class="form-group">
+                    <label for="supplier-email">البريد الإلكتروني</label>
+                    <input id="supplier-email" type="email">
+                </div>
+                <div class="form-group">
+                    <label for="supplier-company">اسم الشركة</label>
+                    <input id="supplier-company" type="text">
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="supplier-address">العنوان</label>
+                    <input id="supplier-address" type="text">
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="supplier-notes">ملاحظات</label>
+                    <textarea id="supplier-notes" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">حفظ المورد</button>
+                <button type="reset" class="btn btn-secondary">تفريغ الحقول</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <h3>قائمة الموردين</h3>
+        <div class="form-group">
+            <label for="suppliers-search">البحث عن مورد</label>
+            <input id="suppliers-search" type="search" placeholder="اسم المورد أو الهاتف">
+        </div>
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>اسم المورد</th>
+                        <th>الشركة</th>
+                        <th>الهاتف</th>
+                        <th>البريد الإلكتروني</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="suppliers-table">
+                    <tr>
+                        <td colspan="5">لا يوجد موردون مسجلون.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
