@@ -8,6 +8,7 @@
 
     <title>SmartStore | إدارة المحل</title>
 
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="stylesheet" href="style.css">
 
     <!-- أيقونات الواجهة -->
@@ -27,7 +28,7 @@
 
             <div class="auth-brand">
                 <div class="brand-logo">
-                    <i class="fa-solid fa-store"></i>
+                    <img src="assets/images/favicon.svg" width="40" height="40" alt="شعار SmartStore">
                 </div>
 
                 <h1>Smart<span>Store</span></h1>
@@ -166,7 +167,7 @@
             <div class="sidebar-brand">
 
                 <div class="brand-logo">
-                    <i class="fa-solid fa-store"></i>
+                    <img src="assets/images/favicon.svg" width="40" height="40" alt="شعار SmartStore">
                 </div>
 
                 <div class="brand-text">
@@ -176,7 +177,7 @@
 
                 <button type="button" id="sidebar-close-btn" class="icon-button sidebar-close-btn"
                     aria-label="إغلاق القائمة">
-                    <i class="fa-solid fa-xmark"></i>
+                    <span aria-hidden="true">×</span>
                 </button>
 
             </div>
@@ -314,7 +315,7 @@
 
                     <button type="button" id="mobile-menu-btn" class="icon-button mobile-menu-btn"
                         aria-label="فتح القائمة">
-                        <i class="fa-solid fa-bars-staggered"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M8 12h12M4 18h16"/></svg>
                     </button>
 
                     <div class="breadcrumb">
@@ -337,11 +338,23 @@
                         <kbd>⌘ K</kbd>
                     </label>
 
-                    <button type="button" id="notifications-btn" class="icon-button notification-button"
-                        aria-label="الإشعارات">
-                        <i class="fa-regular fa-bell"></i>
-                        <span class="notification-dot" hidden></span>
-                    </button>
+                    <div class="notifications-wrapper">
+                        <button type="button" id="notifications-btn" class="icon-button notification-button"
+                            aria-label="الإشعارات" aria-expanded="false" aria-controls="notifications-panel">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+                            <span id="notification-count" class="notification-count" hidden></span>
+                        </button>
+                        <section id="notifications-panel" class="notifications-panel" aria-labelledby="notifications-title" hidden>
+                            <header class="notifications-header">
+                                <h3 id="notifications-title">الإشعارات</h3>
+                                <button type="button" id="notifications-close" class="icon-button" aria-label="إغلاق الإشعارات">×</button>
+                            </header>
+                            <p class="notifications-caption">تابع حالة مخزون متجرك</p>
+                            <button type="button" id="notifications-read" class="notifications-read">تحديد الكل كمقروء</button>
+                            <div id="notifications-list" class="notifications-list"></div>
+                            <p id="notifications-status" class="sr-only" role="status"></p>
+                        </section>
+                    </div>
 
 
                     <!-- قائمة صاحب المحل -->

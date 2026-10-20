@@ -10,6 +10,8 @@ import { initializeInventory } from "./modules/inventory.js";
 import { initializeSales } from "./modules/sales.js";
 import { initializeReports } from "./modules/reports.js";
 
+import { initializeNotifications } from "./modules/notifications.js";
+
 const $ = (selector) => document.querySelector(selector);
 
 let navigationInitialized = false;
@@ -66,6 +68,7 @@ function initializeDates() {
 // تشغيل المشروع
 function initializeApp() {
     initializeDates();
+    initializeNotifications();
 
     // تجهيز الوحدات وأحداثها
     initializeAuth();

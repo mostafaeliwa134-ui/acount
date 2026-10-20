@@ -153,8 +153,8 @@ function updateActiveNavigation(pageName) {
 
 // إغلاق القائمة الجانبية على الشاشات الصغيرة
 function closeSidebar() {
-    $("#sidebar")?.classList.remove("open");
-    $("#sidebar-overlay")?.classList.remove("visible");
+    $("#sidebar")?.classList.remove("is-open");
+    $("#sidebar-overlay")?.classList.remove("is-visible");
 }
 
 // إغلاق قائمة البروفايل المنسدلة
@@ -213,8 +213,8 @@ export function initializeNavigation() {
         }
 
         if (event.target.closest("#mobile-menu-btn")) {
-            $("#sidebar")?.classList.add("open");
-            $("#sidebar-overlay")?.classList.add("visible");
+            $("#sidebar")?.classList.add("is-open");
+            $("#sidebar-overlay")?.classList.add("is-visible");
             return;
         }
 

@@ -2479,3 +2479,70 @@ img {
         display: none !important;
     }
 }
+/* Centered form content and accessible interaction states. */
+.form-group label, .form-label,
+.form-group input, .form-group select, .form-group textarea,
+.input-field { text-align: center; }
+.form-group select { text-align-last: center; }
+.input-icon input { padding-inline: 44px; }
+.form-grid .form-group-full { grid-column: 1 / -1; }
+button:focus-visible, a:focus-visible {
+    outline: 3px solid var(--blue-500);
+    outline-offset: 3px;
+}
+.brand-logo img { display: block; width: 100%; height: 100%; border-radius: inherit; }
+.notifications-wrapper { position: relative; }
+.notification-count {
+    position: absolute; inset-block-start: -3px; inset-inline-end: -4px;
+    min-width: 19px; height: 19px; padding-inline: 4px;
+    display: grid; place-items: center; border: 2px solid white;
+    border-radius: 20px; background: var(--danger); color: white;
+    font-size: 10px; font-weight: 700; line-height: 1;
+}
+.notifications-panel {
+    position: absolute; inset-block-start: calc(100% + 14px); inset-inline-end: 0;
+    width: 360px; max-width: calc(100vw - 24px); padding: 18px;
+    background: white; border: 1px solid var(--border); border-radius: 18px;
+    box-shadow: var(--shadow-lg); z-index: 100;
+}
+.notifications-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.notifications-header h3 { font-size: 17px; }
+.notifications-caption { color: var(--text-secondary); font-size: 12px; }
+.notifications-read { border: 0; background: transparent; color: var(--blue-700); padding-block: 12px; font-size: 12px; }
+.notifications-read:disabled { color: var(--text-secondary); cursor: default; }
+.notifications-list { max-height: min(380px, 55vh); overflow-y: auto; overscroll-behavior: contain; }
+.notification-item {
+    display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 10px;
+    margin-block-end: 6px; border: 1px solid var(--border); border-radius: 12px;
+    background: var(--surface-soft); color: var(--text-primary); text-align: start;
+}
+.notification-item.unread { background: var(--blue-100); border-color: #d0e1ff; }
+.notification-item:hover { border-color: var(--blue-500); }
+.notification-symbol { color: var(--warning); font-size: 22px; }
+.notification-item strong, .notification-item small { display: block; overflow-wrap: anywhere; }
+.notification-item small { color: var(--text-secondary); margin-top: 3px; }
+.notifications-empty { text-align: center; padding: 28px 12px; color: var(--text-secondary); }
+.notifications-empty strong { display: block; color: var(--text-primary); margin-bottom: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+[hidden] { display: none !important; }
+@media (max-width: 600px) {
+    .notifications-panel { position: fixed; inset-block-start: 72px; inset-inline: 12px; width: auto; max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+.page-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; }
+.page-header p, .content-card-header p { color: var(--text-secondary); font-size: 13px; }
+.page-section > .content-card { margin-bottom: 22px; }
+.product-form-card > form { padding: 22px; }
+.table-filters { display: flex; flex-wrap: wrap; gap: 18px; padding: 20px 22px 0; }
+.table-filters .form-group { flex: 1; min-width: 180px; }
+.table-responsive { width: 100%; overflow-x: auto; }
+.data-table th, .data-table td { text-align: center; }
+.data-table button { padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-soft); color: var(--blue-700); margin: 2px; }
+@media (max-width: 600px) {
+    .product-form-card > form { padding: 16px; }
+    .page-header .btn { width: 100%; }
+}
